@@ -23,7 +23,7 @@ public class Employee {
 
     public String gender;
 
-    public int internship;
+    public int training;
 
     public int briefings;
 

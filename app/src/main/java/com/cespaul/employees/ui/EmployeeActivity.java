@@ -1,22 +1,28 @@
 package com.cespaul.employees.ui;
 
-import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.cespaul.employees.R;
 import com.cespaul.employees.base.BaseActivity;
 import com.cespaul.employees.base.BasePresenter;
+import com.cespaul.employees.ui.pages.Page1Fragment;
+import com.cespaul.employees.ui.pages.Page3Fragment;
+import com.cespaul.employees.ui.pages.Page4Fragment;
 import com.cespaul.employees.ui.viewPager.MyPagerAdapter;
-import com.cespaul.employees.ui.viewPager.PageFragment;
-import com.google.android.material.tabs.TabLayout;
+import com.cespaul.employees.ui.pages.Page2Fragment;
 
-public class EmployeeActivity extends BaseActivity implements EmployeeView, PageFragment.OnFragmentInteractionListener {
+public class EmployeeActivity
+        extends BaseActivity
+        implements EmployeeView,
+        Page1Fragment.OnFragmentInteractionListener,
+        Page2Fragment.OnFragmentInteractionListener,
+        Page3Fragment.OnFragmentInteractionListener,
+        Page4Fragment.OnFragmentInteractionListener {
 
     private ViewPager mPager;
 
