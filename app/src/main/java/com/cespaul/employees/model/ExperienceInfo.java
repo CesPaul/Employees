@@ -1,4 +1,4 @@
-package com.cespaul.employees.model.entities;
+package com.cespaul.employees.model;
 
 import java.util.GregorianCalendar;
 

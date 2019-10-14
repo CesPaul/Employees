@@ -1,0 +1,21 @@
+package com.cespaul.employees.ui;
+
+import com.cespaul.employees.base.BasePresenter;
+import com.cespaul.employees.base.BaseView;
+
+public class EmployeePresenter extends BasePresenter {
+
+    @Override
+    public void onViewCreated() {
+        super.onViewCreated();
+    }
+
+    @Override
+    public void onViewDestroyed() {
+        super.onViewDestroyed();
+    }
+
+    public EmployeePresenter(BaseView view) {
+        super(view);
+    }
+}

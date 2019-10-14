@@ -7,7 +7,6 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import com.cespaul.employees.model.entities.Employee;
-import com.cespaul.employees.model.entities.EmployeeInfo;
 
 @Dao
 public interface EmployeeDao {
