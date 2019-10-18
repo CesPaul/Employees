@@ -5,11 +5,11 @@ import java.util.Date;
 public class EmployeeInfo {
 
     // Информация о сотруднике (1я ЭФ)
-    public long number;
+    //public long number;
 
     public String name;
 
-    public String surname;
+    /*public String surname;
 
     public String patronymic;
 
@@ -39,6 +39,6 @@ public class EmployeeInfo {
 
     public int disruptionsForYear;
 
-    public int disruptionTotal;
+    public int disruptionTotal;*/
 
 }

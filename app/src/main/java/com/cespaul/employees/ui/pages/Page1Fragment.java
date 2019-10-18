@@ -13,8 +13,6 @@ import android.view.ViewGroup;
 import com.cespaul.employees.R;
 
 public class Page1Fragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARGUMENT_PAGE_NUMBER = "arg_page_number";
 
     int pageNumber;
@@ -41,7 +39,6 @@ public class Page1Fragment extends Fragment {
         return rootView;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -66,7 +63,6 @@ public class Page1Fragment extends Fragment {
     }
 
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 }

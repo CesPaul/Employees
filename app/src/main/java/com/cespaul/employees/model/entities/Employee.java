@@ -11,11 +11,11 @@ public class Employee {
     @PrimaryKey
     public long id;
 
-    public long number;
+    //public long number;
 
     public String name;
 
-    public String surname;
+    /*public String surname;
 
     public String patronymic;
 
@@ -45,5 +45,5 @@ public class Employee {
 
     public int disruptionsForYear;
 
-    public int disruptionTotal;
+    public int disruptionTotal;*/
 }

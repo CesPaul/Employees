@@ -8,11 +8,13 @@ import androidx.room.Update;
 
 import com.cespaul.employees.model.entities.Employee;
 
+import java.util.List;
+
 @Dao
 public interface EmployeeDao {
 
     @Query("SELECT * FROM employee")
-    EmployeeInfo getAll();
+    List<Employee> getAll();
 
     @Query("SELECT * FROM employee WHERE id = :id")
     Employee getById(long id);
