@@ -2,22 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="250dp"
+    android:layout_height="380dp"
     android:orientation="vertical"
     tools:context=".ui.pages.Page1Fragment">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:gravity="center"
         android:text="Наличие нарушений у сотрудника:" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
+        android:background="@color/colorItems"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -49,6 +49,7 @@
         android:layout_height="70dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
+        android:background="@color/colorItems"
         android:gravity="center"
         android:orientation="horizontal">
 

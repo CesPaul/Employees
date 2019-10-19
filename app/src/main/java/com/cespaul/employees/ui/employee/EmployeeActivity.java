@@ -20,6 +20,7 @@ import com.cespaul.employees.ui.pages.Page2Fragment;
 import com.cespaul.employees.ui.pages.Page3Fragment;
 import com.cespaul.employees.ui.pages.Page4Fragment;
 import com.cespaul.employees.ui.viewPager.MyPagerAdapter;
+import com.google.android.material.tabs.TabLayout;
 
 public class EmployeeActivity
         extends BaseActivity
@@ -47,12 +48,13 @@ public class EmployeeActivity
         mPager = findViewById(R.id.pager);
         pagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(pagerAdapter);
+        mPager.setCurrentItem(1);
         //AppDatabase db = App.getInstance().getDatabase();
         //EmployeeDao employeeDao = db.employeeDao();
         //entDb = db.employeeDao().getAll();
                 //fillData();
-        /*TabLayout tabLayout = findViewById(R.id.tabDots);
-        tabLayout.setupWithViewPager(mPager, true);*/
+        TabLayout tabLayout = findViewById(R.id.tabDots);
+        tabLayout.setupWithViewPager(mPager, true);
     }
 
     @Override
