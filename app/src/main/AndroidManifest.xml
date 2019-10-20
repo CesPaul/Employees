@@ -10,13 +10,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.experience.ExperienceActivity"></activity>
-        <activity android:name=".ui.employee.EmployeeActivity">
+        <activity android:name=".ui.employee.EmployeeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ui.experience.ExperienceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+
         </activity>
     </application>
 

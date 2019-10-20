@@ -2,10 +2,13 @@ package com.cespaul.employees.base;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.Menu;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import com.cespaul.employees.R;
 
 public abstract class BaseActivity extends AppCompatActivity implements BaseView {
     protected BasePresenter presenter;

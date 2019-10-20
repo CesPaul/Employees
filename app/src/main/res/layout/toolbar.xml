@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        style="@style/Toolbar"
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/ToolbarText"
+        app:contentInsetStartWithNavigation="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:text="@string/toolbar_title"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:text="дата"
+            android:textSize="14sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+</LinearLayout>

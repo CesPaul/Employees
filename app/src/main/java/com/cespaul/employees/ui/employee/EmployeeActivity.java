@@ -3,7 +3,10 @@ package com.cespaul.employees.ui.employee;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
 
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
@@ -34,12 +37,22 @@ public class EmployeeActivity
     private ViewPager mPager;
     private PagerAdapter pagerAdapter;
 
-    public Page2Fragment page2 = new Page2Fragment();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        // Инициализация и настройка кастомного Toolbar
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // Установка действия для кнопки "Назад"
+        myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         try {
             this.getPresenter().onViewCreated();
         } catch (Exception e) {
@@ -48,6 +61,7 @@ public class EmployeeActivity
         mPager = findViewById(R.id.pager);
         pagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(pagerAdapter);
+        // Установка страницы по умолчанию
         mPager.setCurrentItem(1);
         //AppDatabase db = App.getInstance().getDatabase();
         //EmployeeDao employeeDao = db.employeeDao();
@@ -55,6 +69,12 @@ public class EmployeeActivity
                 //fillData();
         TabLayout tabLayout = findViewById(R.id.tabDots);
         tabLayout.setupWithViewPager(mPager, true);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
     }
 
     @Override
