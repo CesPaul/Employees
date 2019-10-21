@@ -4,17 +4,18 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.cespaul.employees.R;
 import com.cespaul.employees.base.BaseActivity;
 import com.cespaul.employees.base.BasePresenter;
-import com.cespaul.employees.ui.HeaderFragment;
+import com.cespaul.employees.repository.Employee;
 
-public class ExperienceActivity extends BaseActivity implements ExperienceView,
-        HeaderFragment.OnFragmentInteractionListener {
+public class ExperienceActivity extends BaseActivity implements ExperienceView {
+
+    Employee employee = new Employee();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,16 @@ public class ExperienceActivity extends BaseActivity implements ExperienceView,
                 onBackPressed();
             }
         });
+
+        // Определение содержинаия шапки
+        TextView numberH = findViewById(R.id.numberTextView);
+        TextView surnameH = findViewById(R.id.surnameHeader);
+        TextView nameH = findViewById(R.id.nameHeader);
+        TextView patronymicH = findViewById(R.id.patronymicHeader);
+        numberH.setText(employee.number);
+        surnameH.setText(employee.surname);
+        nameH.setText(employee.name);
+        patronymicH.setText(employee.patronymic);
     }
 
     @Override
@@ -44,10 +55,5 @@ public class ExperienceActivity extends BaseActivity implements ExperienceView,
     @Override
     protected BasePresenter instantiatePresenter() {
         return null;
-    }
-
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
     }
 }

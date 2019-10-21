@@ -9,12 +9,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <fragment
-        android:id="@+id/fragment4"
-        android:name="com.cespaul.employees.ui.HeaderFragment"
+    <include
+        layout="@layout/layout_header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout="@layout/fragment_header" />
+        android:layout_height="wrap_content" />
 
     <TableLayout
         android:layout_width="match_parent"

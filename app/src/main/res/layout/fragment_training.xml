@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="380dp"
     android:orientation="vertical"
-    tools:context=".ui.pages.Page1Fragment">
+    tools:context=".ui.pages.TrainingFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +17,6 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/disruptionsForYearTextView"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
@@ -31,7 +30,7 @@
             android:background="@android:color/darker_gray" />
 
         <TextView
-            android:id="@+id/resTrainingTextView"
+            android:id="@+id/training"
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -50,7 +49,6 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/disruptionTotalTextView"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
@@ -64,7 +62,7 @@
             android:background="@android:color/darker_gray" />
 
         <TextView
-            android:id="@+id/resBriefingsTextView"
+            android:id="@+id/briefings"
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -83,7 +81,6 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/diseaseTextView"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
@@ -97,7 +94,7 @@
             android:background="@android:color/darker_gray" />
 
         <TextView
-            android:id="@+id/resCertificationOtTextView"
+            android:id="@+id/certificationOt"
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -116,7 +113,6 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/provisionTextView"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
@@ -130,7 +126,7 @@
             android:background="@android:color/darker_gray" />
 
         <TextView
-            android:id="@+id/resCertificationPbTextView"
+            android:id="@+id/certificationPb"
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -149,7 +145,6 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/preExaminerTextView"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
@@ -163,7 +158,7 @@
             android:background="@android:color/darker_gray" />
 
         <TextView
-            android:id="@+id/resPreExaminerTextView"
+            android:id="@+id/preExaminer"
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

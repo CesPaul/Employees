@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.PagerAdapter;
@@ -13,29 +14,24 @@ import androidx.viewpager.widget.ViewPager;
 import com.cespaul.employees.R;
 import com.cespaul.employees.base.BaseActivity;
 import com.cespaul.employees.base.BasePresenter;
-import com.cespaul.employees.model.App;
-import com.cespaul.employees.model.AppDatabase;
-import com.cespaul.employees.model.EmployeeDao;
-import com.cespaul.employees.model.entities.Employee;
-import com.cespaul.employees.ui.HeaderFragment;
-import com.cespaul.employees.ui.pages.Page1Fragment;
-import com.cespaul.employees.ui.pages.Page2Fragment;
-import com.cespaul.employees.ui.pages.Page3Fragment;
-import com.cespaul.employees.ui.pages.Page4Fragment;
-import com.cespaul.employees.ui.viewPager.MyPagerAdapter;
+import com.cespaul.employees.repository.Employee;
+import com.cespaul.employees.ui.pages.TrainingFragment;
+import com.cespaul.employees.ui.pages.ProfileFragment;
+import com.cespaul.employees.ui.pages.HealthFragment;
+import com.cespaul.employees.ui.pages.DisruptionsFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class EmployeeActivity
         extends BaseActivity
         implements EmployeeView,
-        HeaderFragment.OnFragmentInteractionListener,
-        Page1Fragment.OnFragmentInteractionListener,
-        Page2Fragment.OnFragmentInteractionListener,
-        Page3Fragment.OnFragmentInteractionListener,
-        Page4Fragment.OnFragmentInteractionListener {
+        TrainingFragment.OnFragmentInteractionListener,
+        ProfileFragment.OnFragmentInteractionListener,
+        HealthFragment.OnFragmentInteractionListener,
+        DisruptionsFragment.OnFragmentInteractionListener {
 
     private ViewPager mPager;
     private PagerAdapter pagerAdapter;
+    Employee employee = new Employee();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,16 +55,21 @@ public class EmployeeActivity
             e.printStackTrace();
         }
         mPager = findViewById(R.id.pager);
-        pagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
+        pagerAdapter = new EmployeePagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(pagerAdapter);
         // Установка страницы по умолчанию
         mPager.setCurrentItem(1);
-        //AppDatabase db = App.getInstance().getDatabase();
-        //EmployeeDao employeeDao = db.employeeDao();
-        //entDb = db.employeeDao().getAll();
-                //fillData();
         TabLayout tabLayout = findViewById(R.id.tabDots);
         tabLayout.setupWithViewPager(mPager, true);
+        // Определение содержинаия шапки
+        TextView numberH = findViewById(R.id.numberTextView);
+        TextView surnameH = findViewById(R.id.surnameHeader);
+        TextView nameH = findViewById(R.id.nameHeader);
+        TextView patronymicH = findViewById(R.id.patronymicHeader);
+        numberH.setText(employee.number);
+        surnameH.setText(employee.surname);
+        nameH.setText(employee.name);
+        patronymicH.setText(employee.patronymic);
     }
 
     @Override
@@ -85,37 +86,6 @@ public class EmployeeActivity
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    @Override
-    public void fillData() {
-        AppDatabase db = App.getInstance().getDatabase();
-        EmployeeDao employeeDao = db.employeeDao();
-        Employee employee = new Employee();
-        employee.id = 1;
-        employee.name = "Ivan";
-        /*employee.surname = "Ivanov";
-        employee.patronymic = "Ivanovich";
-        employee.gender = "муж.";
-        try {
-            birthDate = format.parse(date);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        employee.birthDate = birthDate;
-        employee.breathalyzer = 100;*/
-        employeeDao.insert(employee);
-
-    }
-
-    @Override
-    public void onImgButtonClick() {
-        // TODO: Реализовать вставку картинки по нажатию на кнопку
-    }
-
-    @Override
-    public void onExpButtonClick() {
-
     }
 
     @Override

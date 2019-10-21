@@ -6,7 +6,7 @@
     android:layout_height="380dp"
     android:background="@color/colorPrimary"
     android:orientation="vertical"
-    tools:context=".ui.pages.Page2Fragment">
+    tools:context=".ui.pages.ProfileFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,7 +40,7 @@
             android:paddingTop="5dp">
 
             <TextView
-                android:id="@+id/surnameTextView"
+                android:id="@+id/surname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="right"
@@ -50,7 +50,7 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/nameTextView"
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -62,7 +62,7 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/patronymicTextView"
+                android:id="@+id/patronymic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -86,7 +86,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/birthDateTextView"
+            android:id="@+id/birthDate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="5.05"
@@ -101,7 +101,7 @@
             android:background="@color/colorDividers" />
 
         <TextView
-            android:id="@+id/oldYearstextView"
+            android:id="@+id/oldYears"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
@@ -116,7 +116,7 @@
             android:background="@color/colorDividers" />
 
         <TextView
-            android:id="@+id/genderTextView"
+            android:id="@+id/gender"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -136,7 +136,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/positionTextView"
+            android:id="@+id/position"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -152,7 +152,7 @@
             android:background="@color/colorDividers" />
 
         <TextView
-            android:id="@+id/jobEvaluationTextView"
+            android:id="@+id/jobEvaluation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -174,7 +174,7 @@
         android:paddingBottom="5dp">
 
         <TextView
-            android:id="@+id/currentExperienceTextView"
+            android:id="@+id/currentExperience"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="5"
@@ -189,7 +189,7 @@
             android:background="@color/colorDividers" />
 
         <TextView
-            android:id="@+id/totalExperienceTextView"
+            android:id="@+id/totalExperience"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="5"
